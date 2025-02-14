@@ -1,0 +1,25 @@
+developer@ccfl6-pc24:~/MCA_B22/nsa$ mkdir D1
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cd D1
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1$ mkdir -p D11 D12 D13 D14
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1$ ls
+D11  D12  D13  D14
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1$ cd D11
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1/D11$ touch F1 F2 F3
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1/D11$ ls
+F1  F2  F3
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1/D11$ cd ..
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1$ cd D12
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1/D12$ touch F4
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1/D12$ ls
+F4
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1/D12$ cd ..
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1$ cd D13
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1/D13$ touch F5 F6
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1/D13$ ls
+F5  F6
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1/D13$ cd ..
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1$ cd D14
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1/D14$ touch F7 F8 F9
+developer@ccfl6-pc24:~/MCA_B22/nsa/D1/D14$ ls
+F7  F8  F9
+
