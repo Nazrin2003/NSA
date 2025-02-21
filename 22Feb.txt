@@ -1,0 +1,71 @@
+developer@ccfl6-pc24:~/MCA_B22/nsa$ tar -cf backup.tar A
+developer@ccfl6-pc24:~/MCA_B22/nsa$ ls
+A  Copy  D  D1  backup.tar  commands  f
+developer@ccfl6-pc24:~/MCA_B22/nsa$ ls -a
+.  ..  A  Copy  D  D1  backup.tar  commands  f
+developer@ccfl6-pc24:~/MCA_B22/nsa$ ls -r
+f  commands  backup.tar  D1  D  Copy  A
+developer@ccfl6-pc24:~/MCA_B22/nsa$ ls
+A  Copy  D  D1  backup.tar  commands  f  f1  f2
+developer@ccfl6-pc24:~/MCA_B22/nsa$ head f
+hello
+welcome
+1
+2
+3
+4
+5
+6
+7
+8
+developer@ccfl6-pc24:~/MCA_B22/nsa$ head -n 4 f
+hello
+welcome
+1
+2
+developer@ccfl6-pc24:~/MCA_B22/nsa$ ls -l>f
+developer@ccfl6-pc24:~/MCA_B22/nsa$ ls -ls>f
+developer@ccfl6-pc24:~/MCA_B22/nsa$ head f
+total 32
+ 4 drwxr-xr-x 3 developer developer  4096 Feb 20 15:29 A
+ 4 -rw-r--r-- 1 developer developer   808 Feb 20 16:13 Copy
+ 4 drwxr-xr-x 3 developer developer  4096 Feb 20 15:32 D
+ 4 drwxr-xr-x 6 developer developer  4096 Feb 20 15:17 D1
+12 -rw-r--r-- 1 developer developer 10240 Feb 21 11:48 backup.tar
+ 4 -rw-r--r-- 1 developer developer   983 Feb 20 16:23 commands
+ 0 -rw-r--r-- 1 developer developer     0 Feb 21 12:08 f
+ 0 -rw-r--r-- 1 developer developer     0 Feb 21 12:02 f1
+ 0 -rw-r--r-- 1 developer developer     0 Feb 21 12:02 f2
+developer@ccfl6-pc24:~/MCA_B22/nsa$ ls-l|head -n 5
+bash: ls-l: command not found
+developer@ccfl6-pc24:~/MCA_B22/nsa$ ls -l|head -n 5 f1 f2
+==> f1 <==
+hello
+how are you
+21
+434
+65
+
+==> f2 <==
+Welcome to linux
+commands
+linux
+ls
+mkd
+developer@ccfl6-pc24:~/MCA_B22/nsa$ ls -l|head -n 5
+total 44
+drwxr-xr-x 3 developer developer  4096 Feb 20 15:29 A
+-rw-r--r-- 1 developer developer   808 Feb 20 16:13 Copy
+drwxr-xr-x 3 developer developer  4096 Feb 20 15:32 D
+drwxr-xr-x 6 developer developer  4096 Feb 20 15:17 D1
+developer@ccfl6-pc24:~/MCA_B22/nsa$ ls -l|head -n 10
+total 44
+drwxr-xr-x 3 developer developer  4096 Feb 20 15:29 A
+-rw-r--r-- 1 developer developer   808 Feb 20 16:13 Copy
+drwxr-xr-x 3 developer developer  4096 Feb 20 15:32 D
+drwxr-xr-x 6 developer developer  4096 Feb 20 15:17 D1
+-rw-r--r-- 1 developer developer 10240 Feb 21 11:48 backup.tar
+-rw-r--r-- 1 developer developer   983 Feb 20 16:23 commands
+-rw-r--r-- 1 developer developer   544 Feb 21 12:08 f
+-rw-r--r-- 1 developer developer    45 Feb 21 12:17 f1
+-rw-r--r-- 1 developer developer    51 Feb 21 12:18 f2
