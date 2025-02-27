@@ -1,0 +1,22 @@
+developer@ccfl6-pc24:~/MCA_B22/nsa$ mkdir A
+developer@ccfl6-pc24:~/MCA_B22/nsa$ mkdir D
+developer@ccfl6-pc24:~/MCA_B22/nsa$ ls
+A  D  
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cd A
+developer@ccfl6-pc24:~/MCA_B22/nsa/A$ mkdir B
+developer@ccfl6-pc24:~/MCA_B22/nsa/A$ cd B
+developer@ccfl6-pc24:~/MCA_B22/nsa/A/B$ touch m1
+developer@ccfl6-pc24:~/MCA_B22/nsa/A/B$ ls
+m1
+developer@ccfl6-pc24:~/MCA_B22/nsa/A/B$ cd ../../D
+developer@ccfl6-pc24:~/MCA_B22/nsa/D$ mkdir E
+developer@ccfl6-pc24:~/MCA_B22/nsa/D$ cd E
+developer@ccfl6-pc24:~/MCA_B22/nsa/D/E$ mkdir F
+developer@ccfl6-pc24:~/MCA_B22/nsa/D/E$ cd ../../A/B
+developer@ccfl6-pc24:~/MCA_B22/nsa/A/B$ ls
+m1
+developer@ccfl6-pc24:~/MCA_B22/nsa/A/B$ cp m1 ../../D/E/F
+developer@ccfl6-pc24:~/MCA_B22/nsa/A/B$ cd ../../D/E/F
+developer@ccfl6-pc24:~/MCA_B22/nsa/D/E/F$ ls
+m1
+

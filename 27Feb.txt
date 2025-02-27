@@ -1,0 +1,54 @@
+developer@ccfl6-pc24:~/MCA_B22/nsa$ ls|wc
+     10      10      56
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cat f1|wc
+     10      11      45
+developer@ccfl6-pc24:~/MCA_B22/nsa$ wc f
+ 10  92 544 f
+developer@ccfl6-pc24:~/MCA_B22/nsa$ wc -l f
+10 f
+developer@ccfl6-pc24:~/MCA_B22/nsa$ wc -w f
+92 f
+developer@ccfl6-pc24:~/MCA_B22/nsa$ wc -m f
+544 f
+developer@ccfl6-pc24:~/MCA_B22/nsa$ wc -L f1
+11 f1
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cat f1
+hello
+how are you
+21
+434
+65
+87
+09
+54
+444445
+developer@ccfl6-pc24:~/MCA_B22/nsa$ echo "hello world"|wc
+      1       2      12
+developer@ccfl6-pc24:~/MCA_B22/nsa$ echo "hello world"|wc -l
+1
+developer@ccfl6-pc24:~/MCA_B22/nsa$ echo "hello world"|wc -m
+12
+developer@ccfl6-pc24:~/MCA_B22/nsa$ echo "hello world"|wc -w
+2
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cat f1
+hello
+how are you
+21
+434
+65
+87
+09
+54
+444445
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cut -c1-2 f1
+he
+ho
+21
+43
+65
+87
+09
+54
+44
+developer@ccfl6-pc24:~/MCA_B22/nsa$ echo "hello world"|cut -c2-4
+ell
