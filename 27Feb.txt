@@ -52,3 +52,82 @@ ho
 44
 developer@ccfl6-pc24:~/MCA_B22/nsa$ echo "hello world"|cut -c2-4
 ell
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cat a2.csv
+1,Arun,23
+2,Asha,30
+3,Nimal,23
+4,Nihad,22
+5,Joyal,20
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cut -d',' -f3 a2.csv
+23
+30
+23
+22
+20
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cat>a1 
+1,Liam,K   
+2,Sarah,J
+3,Ken,H    
+^Z
+[4]+  Stopped                 cat > a1
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cut -d',' -f3 a1    
+K
+J
+H
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cut -d',' -f2-3 a2.csv
+Arun,23
+Asha,30
+Nimal,23
+Nihad,22
+Joyal,20
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cut -d',' -f3,1 a2.csv
+1,23
+2,30
+3,23
+4,22
+5,20
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cut -d',' -f3 a2.csv> a3.csv
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cat a3.csv
+23
+30
+23
+22
+20
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cat>a
+a
+b
+c
+d
+e
+f
+^Z
+[5]+  Stopped                 cat > a
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cat>b
+1
+2
+3
+4
+5
+6
+^Z
+[6]+  Stopped                 cat > b
+developer@ccfl6-pc24:~/MCA_B22/nsa$ paste a b
+a       1
+b       2
+c       3
+d       4
+e       5
+f       6
+developer@ccfl6-pc24:~/MCA_B22/nsa$ paste -d'*' b a
+1*a
+2*b
+3*c
+4*d
+5*e
+6*f
+developer@ccfl6-pc24:~/MCA_B22/nsa$ paste -d'.' -s a
+a.b.c.d.e.f
+developer@ccfl6-pc24:~/MCA_B22/nsa$ paste -d',' -s a
+a,b,c,d,e,f
+developer@ccfl6-pc24:~/MCA_B22/nsa$ paste -d'*' -s b
+1*2*3*4*5*6
