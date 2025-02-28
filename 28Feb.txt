@@ -1,0 +1,36 @@
+developera2@ccfl9-pc1:~/MCA_B22/NSA$ mkdir -p Project34/Payroll Project34/Sales
+developera2@ccfl9-pc1:~/MCA_B22/NSA$ cd Project34/Payroll
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ touch Checks.dat Pay2.dat
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ cd ..
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34$ cd Sales
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales$ mkdir RegionA RegionB
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales$ cd RegionA
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales/RegionA$ touch East.dat
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales/RegionA$ cd ..
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales$ cd RegionB
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales/RegionB$ touch west1.dat west2.dat west3.dat
+
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales/RegionB$ 
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales/RegionB$ cd ../../Payroll
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ cp Pay2.dat ../Sales/RegionA  
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ cp Pay2.dat ../Sales/RegionB 
+
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales/RegionB$ touch ../RegionA/East1.dat
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales/RegionB$ cp west3.dat ../RegionA/East1.dat
+
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ touch payment.dat
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ cat > Checks.dat
+Hello
+How are you
+Wlcome to Linux
+^Z
+[1]+  Stopped                 cat > Checks.dat
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ cat > Pay2.dat
+Linux can perform the following:
+Display
+Copy
+Create 
+View
+^Z
+[2]+  Stopped                 cat > Pay2.dat
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ cat Checks.dat Pay2.dat > payment.dat
