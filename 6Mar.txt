@@ -1,0 +1,144 @@
+developer@ccfl6-pc24:~/MCA_B22/nsa$ grep "error" a.txt
+error
+errors a error
+hello error
+what is error
+how to clear errors
+
+developer@ccfl6-pc24:~/MCA_B22/nsa$ grep -i "error" a.txt
+error
+ERROR a error
+hello error
+what is error
+how to clear errors
+developer@ccfl6-pc24:~/MCA_B22/nsa$ grep -n "error" a.txt
+1:error
+2:ERROR a error
+3:hello error
+4:what is error
+5:how to clear errors
+
+developer@ccfl6-pc24:~/MCA_B22/nsa$ grep -r "error" 
+a:hello error
+a:what is error
+a:how to clear errors
+b:error
+cat:error
+a.txt:error
+a.txt:ERROR a error
+
+developer@ccfl6-pc24:~/MCA_B22/nsa$ grep -rn "error" 
+a:1:hello error
+a:2:what is error
+a:3:how to clear errors
+b:7:error
+cat:6:error
+a.txt:1:error
+a.txt:2:ERROR a error
+
+developer@ccfl6-pc24:~/MCA_B22/nsa$ grep "error" a.txt a
+a.txt:error
+a.txt:ERROR a error
+a:hello error
+a:what is error
+a:how to clear errors
+
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cat a.txt
+error
+ERROR
+a error
+Welcome to 
+linux
+developer@ccfl6-pc24:~/MCA_B22/nsa$ grep -v "error" a.txt 
+ERROR
+Welcome to 
+linux
+developer@ccfl6-pc24:~/MCA_B22/nsa$ grep -vi "error" a.txt 
+Welcome to 
+linux
+
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cat a.txt
+error is error
+ERROR
+developer@ccfl6-pc24:~/MCA_B22/nsa$ grep "^error" a.txt 
+error is error
+
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cat a.txt
+error is error
+ERROR
+a error fail
+Welcome to 
+linux
+time is lost
+developer@ccfl6-pc24:~/MCA_B22/nsa$ grep -E "error|fail|time" a.txt
+error is error
+a error fail
+time is lost
+
+developer@ccfl6-pc24:~/MCA_B22/nsa$ cat a
+hello error
+what is error
+how to clear errors
+developer@ccfl6-pc24:~/MCA_B22/nsa$ grep -w "error" a     
+hello error
+what is error
+
+
+developer@ccfl6-pc24:~/MCA_B22/nsa$ find -name a.txt
+./a.txt
+./D1/a.txt
+
+developer@ccfl6-pc24:~/MCA_B22/nsa$ find D1 -name a.txt
+D1/a.txt
+D1/D14/D1.1/a.txt
+
+developer@ccfl6-pc24:~/MCA_B22/nsa$ find -type d -name "D"
+./D
+
+developer@ccfl6-pc24:~/MCA_B22/nsa$ find -type f -name "f"
+./f
+
+developer@ccfl6-pc24:~/MCA_B22/nsa$ find D1 -type f -empty
+D1/D13/F6
+D1/D13/F5
+D1/a.txt
+D1/D11/F2
+D1/D11/F3
+D1/D11/F1
+
+developer@ccfl6-pc24:~/MCA_B22/nsa$ find D4 -type d -empty
+D4/d1/d2
+
+developer@ccfl6-pc24:~/MCA_B22/nsa$ find D1/ -size -1k
+D1/D13/F6
+D1/D13/F5
+D1/a.txt
+D1/D11/F2
+D1/D11/F3
+D1/D11/F1
+D1/D12/F4
+D1/D14/F8
+D1/D14/F7
+D1/D14/F9
+D1/D14/D1.1/a.txt
+developer@ccfl6-pc24:~/MCA_B22/nsa$ find D1/ -mtime 7 
+developer@ccfl6-pc24:~/MCA_B22/nsa$ find D1/ -mtime -7
+D1/
+D1/a.txt
+D1/D14
+D1/D14/D1.1
+D1/D14/D1.1/a.txt
+developer@ccfl6-pc24:~/MCA_B22/nsa$ find D1/ -mtime +7
+D1/D13
+D1/D13/F6
+D1/D13/F5
+D1/D11
+D1/D11/F2
+D1/D11/F3
+D1/D11/F1
+D1/D12
+D1/D12/F4
+D1/D14/F8
+D1/D14/F7
+D1/D14/F9
+developer@ccfl6-pc24:~/MCA_B22/nsa$ find D1/ -perm 775
