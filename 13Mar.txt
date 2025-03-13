@@ -1,0 +1,93 @@
+developer@ccfl6-pc23:~/mcab21/nsa22$ sort f.txt
+1 Lines starting with a number go before the lines beginning with a letter, 
+7 The main rules are:
+A Lines starting with letters are sorted in ascending alphabetical order (A-Z).
+a Running the sort command without [options] outputs the file's contents and 
+
+developer@ccfl6-pc23:~/mcab21/nsa22$ cat s.txt
+5
+4
+3
+0
+1
+2
+A
+a 
+c
+b
+B 
+C 
+developer@ccfl6-pc23:~/mcab21/nsa22$ sort -n s.txt
+0
+A
+B 
+C 
+a 
+b
+c
+1
+2
+3
+4
+5
+developer@ccfl6-pc23:~/mcab21/nsa22$ sort s.txt
+0
+1
+2
+3
+4
+5
+A
+B 
+C 
+a 
+b
+c
+developer@ccfl6-pc23:~/mcab21/nsa22$ sort -r s.txt
+c
+b
+a 
+C 
+B 
+A
+5
+4
+3
+2
+1
+0
+developer@ccfl6-pc23:~/mcab21/nsa22$ sort -f s.txt
+0
+1
+2
+3
+4
+5
+A
+a 
+b
+B 
+c
+C 
+
+developer@ccfl6-pc23:~/mcab21/nsa22$ cat f1.txt
+apple,3
+banana,1
+cherry,2
+developer@ccfl6-pc23:~/mcab21/nsa22$ sort -t, -k2 f1.txt
+banana,1
+cherry,2
+apple,3
+
+developer@ccfl6-pc23:~/mcab21/nsa22$ cat s1.txt
+David 20
+Bob 25
+Eve 28
+Alice 30
+Charlie 35
+developer@ccfl6-pc23:~/mcab21/nsa22$ sort -k1 s1.txt
+Alice 30
+Bob 25
+Charlie 35
+David 20
+Eve 28
