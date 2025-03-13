@@ -1,0 +1,86 @@
+Exercise 1
+developera2@ccfl9-pc1:~/MCA_B22/NSA/
+
+# 1.Create the above directory tree and enter necessary data into the files.Then perform the
+# following operations using linux utilities.
+developera2@ccfl9-pc1:~/MCA_B22/NSA$ mkdir -p Project34/Payroll Project34/Sales
+developera2@ccfl9-pc1:~/MCA_B22/NSA$ cd Project34/Payroll
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ touch Checks.dat Pay2.dat
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ cd ..
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34$ cd Sales
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales$ mkdir RegionA RegionB
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales$ cd RegionA
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales/RegionA$ touch East.dat
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales/RegionA$ cd ..
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales$ cd RegionB
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales/RegionB$ touch west1.dat west2.dat west3.dat
+
+# a) Copy pay2.dat to directories RegionA and RegionB.
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales/RegionB$ cd ../../Payroll
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ cp Pay2.dat ../Sales/RegionA  
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ cp Pay2.dat ../Sales/RegionB
+
+# b) Save the file west3.dat to RegionA under the name East1.dat
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ cd ../Sales/RegionB
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales/RegionB$ touch ../RegionA/East1.dat
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales/RegionB$ cp west3.dat ../RegionA/East1.dat
+
+# c) Combine the contents of Checks.dat and pay2.dat into a new file payment.dat under payroll.
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Sales/RegionB$ cd ../../Payroll
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ touch payment.dat
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ cat > Checks.dat
+Hello
+How are you
+Welcome to Linux
+^Z
+[1]+  Stopped             	cat > Checks.dat
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ cat > Pay2.dat
+Linux can perform the following:
+Display
+Copy
+Create
+View
+^Z
+[2]+  Stopped             	cat > Pay2.dat
+developera2@ccfl9-pc1:~/MCA_B22/NSA/Project34/Payroll$ cat Checks.dat Pay2.dat > payment.dat
+
+# d)Get the count of the number of ordinary files in Sales directory.
+find -type f |wc -l
+developer@ccfl6-pc23:~/mcab21/nsa22/Project34/Sales$ find -type f |wc -l 
+7
+
+# e)Find the list all *.dat files in Project34 directory.
+cd ..
+find -name *.dat
+find -name *.dat
+./Payroll/payment.dat
+./Payroll/Checks.dat
+./Payroll/Pay2.dat
+./Sales/RegionB/west3.dat
+./Sales/RegionB/west1.dat
+./Sales/RegionB/west2.dat
+./Sales/RegionB/Pay2.dat
+./Sales/RegionA/East1.dat
+./Sales/RegionA/East.dat
+./Sales/RegionA/Pay2.dat
+
+# f)Sort pay2.dat in the descending order of payment amount.
+cd Sales/RegionA
+developer@ccfl6-pc23:~/mcab21/nsa22/Project34/Sales/RegionA$ cat >Pay2.dat
+60000
+45000
+50000
+35000
+^Z
+[3]+  Stopped                 cat > Pay2.dat
+developer@ccfl6-pc23:~/mcab21/nsa22/Project34/Sales/RegionA$ sort -n -r Pay2.dat -o Pay2.dat
+
+# g)Display the list of all files in the Sales directory in uppercase.
+
+
+# h)Remove RegionB directory and its contents in one shot.
+
+
+Exercise 2
+
+
